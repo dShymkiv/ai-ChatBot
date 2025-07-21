@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyBuddy - Your CS Study Assistant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="header content">
+            <div class="logo">
+                <div class="avatar">
+                    <div class="owl-face">
+                        <div class="eyes">
+                            <div class="eye left"></div>
+                            <div class="eye right"></div>
+                        </div>
+                        <div class="glasses"></div>
+                        <div class="beak"></div>
+                    </div>
+                </div>
+                <h1>StudyBuddy</h1>
+            </div>
+            <p class="tagline">Your smart & funny CS buddy, always here to help!</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="chat-container">
+            <div class="chat-history" id="chatHistory">
+
+                <div class="message bot-message">
+                    <div class="message-content">
+                        <div class="avatar-small">
+                            <div class="owl-face small">
+                                <div class="eyes">
+                                    <div class="eye left"></div>
+                                    <div class="eye right"></div>
+                                </div>
+                                <div class="glasses"></div>
+                            </div>
+                        </div>
+                        <div class="text">
+                            <p>Hey there! 👋 I'm StudyBuddy, your personal CS assistant. Ask me anything about CS!</p>
+                            <p>Stuck on homework? or Need help with a concept? Just ask away!</p>
+                        </div>
+                    </div>
+                    <div class="message time">Just now</div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="typing-indicator" id="typingIndicator">
+                    <div class="dots">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </div>
+                    <span>StudyBuddy is typing...</span>
+                </div>
+                <div class="input-container">
+                    <textarea id="userInput" placeholder="Ask me anything about CS..."></textarea>
+                    <button id="sendButton" type="button" onclick="sendMessage()">
+    <i class="fas fa-paper-plane"></i>
+</button>
+                </div>
+                <div class="suggestions">
+                    <p>Try asking:</p>
+                    <div class="suggestion-buttons">
+                        <button class="suggestion-btn">what is the databased and how does it work?</button>
+                        <button class="suggestion-btn">What is data visulization?</button>
+                        <button class="suggestion-btn">Explain recursion</button>
+                        <button class="suggestion-btn">How do semaphores work?</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
