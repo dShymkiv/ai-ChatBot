@@ -30,7 +30,6 @@ A smart chatbot that helps students learn Computer Science concepts using AI-pow
 
 ```bash
 git clone <repository-url>
-cd master-ai-deployment
 ```
 
 ### 2. Create Virtual Environment
